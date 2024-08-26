@@ -6,8 +6,8 @@
       url("./assets/fonts/WOFF/SharpSansDispNo1-Medium.woff") format("woff");
 }
 :root {
-    --main-bg-color: #76351F;
-    --color:white;
+    --main-bg-color: #BBC786;
+    --color:#773620;
     --space: 30px;
     --font-size-small: 16px;
     --font-size-body: 18px;
@@ -22,6 +22,8 @@
 img#hp-image{
     width: 100vw;
     top:0;
+    opacity: 0.3;
+    filter: blur(5px);
     left:0;
     position:fixed;
     height: auto;
@@ -99,11 +101,12 @@ header #banner{
     position:absolute;
     width: 100vw;
     height: 100vh;
-    opacity: 0.3;
+    opacity: 0.2;
     pointer-events: none;
     left:0;
     top:0;
     background-size: cover;
+    filter:blur(5px);
     background-repeat: no-repeat;
 }
 /* LOGO */
@@ -137,7 +140,9 @@ header #banner{
     padding-bottom:0;
     font-size:var(--font-size-body);
     position:fixed;
-    bottom: calc(var(--space)/2 + 5px);
+    top: var(--space);
+    padding: calc(var(--space)/2);
+    background-color: var(--main-bg-color);
     right: var(--space);
     z-index: 9;
     cursor: pointer;
@@ -403,8 +408,9 @@ main{
 }
 
 #next-artist{
-    margin-left: var(--left-column);
-    width: calc(100% - var(--left-column));
+    margin:0  auto;
+    margin-top:var(--space-large);
+    width: calc(80% - var(--left-column));
     background-size: cover;
     background-repeat: no-repeat;
     height: 450px;
@@ -414,7 +420,12 @@ main{
     align-items: center;
     justify-content: center;
 }
+#next-artist:hover{
+    opacity: 0.9;
+}
 #next-artist h1{
+    padding:calc(var(--space)/2);
+    background-color: var(--main-bg-color);
     font-size: var(--font-size-large);
 }
 #back-to-home{
@@ -440,12 +451,13 @@ main{
     padding:10px;
     font-family: inherit;
     font-size:inherit;
-    color:white;
+    cursor: pointer;
+    color:var(--color);
     background-color: var(--main-bg-color);
     border: none;
 }
-#back-to-home:hover button{
-    background:  var(--light-bg-color);
+#back-to-home button:hover{
+   opacity: 0.9;
 }
 
 /* LIGHTBOX*/
