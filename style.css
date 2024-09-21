@@ -5,6 +5,13 @@
       url("./assets/fonts/EOT/SharpSansDispNo1-Medium.eot") format("opentype"),
       url("./assets/fonts/WOFF/SharpSansDispNo1-Medium.woff") format("woff");
 }
+
+@font-face {
+    font-family: "SharpSans Semibold";
+    src:
+      url("./assets/fonts/EOT/SharpSansDispNo1-Semibold.eot") format("opentype"),
+      url("./assets/fonts/WOFF/SharpSansDispNo1-Semibold.woff") format("woff");
+}
 :root {
     --main-bg-color: #BBC786;
     --color:#773620;
@@ -31,6 +38,9 @@ img#hp-image{
 a:link, a:hover, a:visited{
     color:inherit;
 }
+a:hover{
+    text-decoration: underline;
+}
 body p{
     line-height: 1.4;
 }
@@ -50,6 +60,9 @@ body.arabic .arabic{
 }
 body.arabic .english{
     display: none;
+}
+strong{
+    font-family: "SharpSans Semibold";
 }
 #canvas canvas{
     display: block;
@@ -96,6 +109,7 @@ header video{
     pointer-events: none;
     left:0;
     top:0;
+    z-index: -1;
 }
 header #banner{
     position:absolute;
@@ -153,8 +167,8 @@ header #banner{
 header #intro{
     position: absolute;
     z-index: 2;
-    padding-left: var(--left-column);
-    padding-right:50px;
+    /* padding-right:50px; */
+    padding:0 calc(var(--space-large) * 4);
     max-height: calc(100vh - ((var(--space-large)*2) + var(--space)));
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -168,7 +182,12 @@ header #intro::-webkit-scrollbar {
   }
 #hp-intro{
     font-size: var(--font-size-large);
-    margin-top:0;
+    display:block;
+    margin: 0 auto;
+    margin-top: 35vh;
+}
+#hp-intro .hp-h1{
+  text-align: center;
 }
 #hp-intro em{
     font-size: var(--font-size-body-larger);
@@ -184,17 +203,16 @@ header #intro::-webkit-scrollbar {
     max-width: 500px;
 }
 header #intro p{
-
     text-align: left;
 }
 header #intro #hp-intro{
     text-align: left;
 }
 header #intro h1{
-    text-align:left;
+    text-align: left;
     margin:0;
     position: relative;
-    max-width: 900px;
+    width: calc(100% - (var(--space) * 2));
 }
 #curatorial-statement p{
     margin: var(--space-large);
@@ -437,6 +455,7 @@ main{
     z-index: 4;
     height: 350px;
     cursor: pointer;
+    background-color: var(--main-bg-color);
     overflow: hidden;
     display: block;
     position:relative;
@@ -447,7 +466,7 @@ main{
 }
 #back-to-home video{
     position:absolute;
-    filter: brightness(50%);
+    opacity: 0.6;
     z-index: 0;
 }
 #back-to-home button{
