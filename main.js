@@ -1,8 +1,16 @@
-document.querySelector("footer").addEventListener("click", function(){
-    if(this.classList.contains("on")){
-        this.classList.remove("on")
+document.querySelector("footer h4 span").addEventListener("click", function(){
+    if(document.querySelector("footer").classList.contains("on")){
+        document.querySelector("footer").classList.remove("on")
     }else{
-        this.classList.add("on")
+        document.querySelector("footer").classList.add("on")
+    }
+})
+
+document.querySelector("footer svg").addEventListener("click", function(){
+    if(document.querySelector("footer").classList.contains("on")){
+        document.querySelector("footer").classList.remove("on")
+    }else{
+        document.querySelector("footer").classList.add("on")
     }
 })
 
