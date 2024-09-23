@@ -23,7 +23,7 @@
     --font-size-larger: 50px;
     --left-column: 305px;
     --space-large:80px;
-    --light-bg-color: #0116026f;
+    --light-bg-color: #4d562531;
 }
 
 img#hp-image{
@@ -277,7 +277,7 @@ footer .close{
     right:32px;
     padding:10px;
 }
-footer svg line{
+footer svg line,.close-transcript svg line{
     stroke:var(--color);
     stroke-linecap:round;
     stroke-miterlimit:10;
@@ -321,7 +321,6 @@ footer a{
 }
 footer a:hover{
     cursor: pointer;
-    background-color: var(--light-bg-color);
 }
 /*main*/
 
@@ -392,6 +391,54 @@ main{
 }
 .work.exception{
     width: 30%;
+}
+
+#english-transcript-toggle,#spanish-transcript-toggle, #arabic-transcript-toggle{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#english-transcript-toggle:hover,#spanish-transcript-toggle:hover, #arabic-transcript-toggle:hover{
+    font-family: "SharpSans Semibold";
+}
+.close-transcript{
+    position: absolute;
+    top:var(--space);
+    right:var(--space);
+    cursor: pointer;
+}
+.close-transcript svg{
+    width: 25px;
+    height: 25px;
+}
+#english-transcript,#spanish-transcript, #arabic-transcript{
+    position:fixed;
+    background-color: var(--light-bg-color);
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition:opacity 0.3s;
+
+}
+#english-transcript.on,#spanish-transcript.on, #arabic-transcript.on{
+    opacity: 1;
+    display: flex;
+}
+#english-transcript .inner,#spanish-transcript .inner, #arabic-transcript .inner{
+    background-color: var(--main-bg-color);
+    width: calc(80% - (var(--space-large)*2));
+    position:relative;
+    padding: var(--space-large);
+}
+.modal .inside{
+    height: 55vh;
+    overflow: scroll;
+    padding:var(--space) 0;
 }
 .main-up{
     display: block;
@@ -640,6 +687,9 @@ main{
     }
     .work.exception{
         width: 80%;
+    }
+    #english-transcript-toggle,#spanish-transcript-toggle, #arabic-transcript-toggle{
+        text-align: center;
     }
     .main-up{
         width: 30px;
