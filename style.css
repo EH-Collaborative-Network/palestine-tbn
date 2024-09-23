@@ -216,6 +216,9 @@ header #intro h1{
     position: relative;
     width: calc(100% - (var(--space) * 2));
 }
+#curator-bio{
+    margin-top:calc(var(--space-large) * 2);
+}
 #curatorial-statement p{
     margin: var(--space-large);
     white-space: normal;
