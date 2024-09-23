@@ -335,8 +335,12 @@ main{
     margin-top: calc(100vh - 50px);
     padding: var(--space-large);
 }
+#artist-discussion{
+    margin-bottom: calc(var(--space-large) * 2);
+}
 
 /* Gallery */
+
 #gallery{
     display: flex;
     position: relative;
