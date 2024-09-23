@@ -338,6 +338,9 @@ main{
 #artist-discussion{
     margin-bottom: calc(var(--space-large) * 2);
 }
+#curatorial-statement, #curator-bio{
+    padding: 0 var(--space-large);
+}
 
 /* Gallery */
 
@@ -642,7 +645,9 @@ main{
     #back-to-home{
         height: 150px;
     }
-
+    #curatorial-statement,#curator-bio{
+        padding:0;
+    }
     #curatorial-statement p{
         margin: var(--space) 0;
         margin-bottom: calc(var(--space-large) * 2)
