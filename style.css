@@ -273,7 +273,7 @@ footer h4 span:hover{
 footer .close{
     display: none;
     position:absolute;
-    top:-5px;
+    top:2px;
     right:32px;
     padding:10px;
 }
