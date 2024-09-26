@@ -575,42 +575,34 @@ main{
 
 
 /*Timeline*/
-.timeline .line{
-    width: 4px;
-    left: 50%;
-    position:absolute;
-    background-color: #773620;
-    height: 1000px;
-}
+
 .timeline{
-    width: 100%;
-    min-height:100vh;
-    display: block;
+    background-color: rgba(255, 255, 255, 0.495);
+    overflow-x: hidden;
+    margin-bottom: var(--space-large);
+    border:2px solid var(--color);
     position:relative;
 }
-.tick{
-   position: absolute;
-   left: 50%;
+.timeline > p:first-child{
+    position:absolute;
+    right: 0%;
+    z-index: 3;
+    text-align: center;
 }
-.tick div{
-    height: 5px;
-    width: 100px;
+.timeline > p:nth-child(2){
+    position:absolute;
+    left: var(--space);
+    z-index: 3;
+    
 }
-#tick1948 div{
-    background-color: #7c3017;
-}
-#tick1946 div{
-    background-color: #351207;
-}
-.timeline #map1{
-    position:relative;
-    width: 500px;
-}
-.timeline img{
-    width: 100%;
+.timeline .inner{
+    width: 400vw;
+    display: flex;
 }
 
-
+.timeline .inner img{
+    width: 100vw;
+}
 
 /* LIGHTBOX*/
 #lightbox{
@@ -643,7 +635,7 @@ main{
     font-size: var(--font-size-body-larger);
 }
 /* MOBILE */
-@media(max-width: 1105px) {
+@media(max-width: 900px) {
         
     :root{
         --space: 10px;

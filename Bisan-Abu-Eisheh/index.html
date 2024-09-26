@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Be－Named: Asameena / اسامينا</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./assets/timeline/zoompan.css">
 </head>
 <body>
     <div id="logo">
@@ -39,12 +40,24 @@
             </div>
 
 <!-- TIMELINE -->
-            <div class="timeline">
-                <div class="line"></div>
-                <div id="map1"><img src="assets/map1.png"/></div>
-                <div id="tick1948" class="tick"><div></div><span>1948</span></div>
-                <div id="tick1946" class="tick"><div></div><span>1946</span></div>
-            </div>
+
+<div class="timeline">
+    <p>
+    <audio controls>
+        <source src="./assets/lecture.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio><br>
+     listen to lecture
+    
+    </p>
+    <p>drag and zoom to explore timeline</p>
+    <div class="inner">
+        <img src="./assets/timeline/1.png"/>
+        <img src="./assets/timeline/2.png"/>
+        <img src="./assets/timeline/3.png"/>
+        <img src="./assets/timeline/4.png"/>
+    </div>
+</div>
 
  <div class="description english">
     Bisan Abu-Eisheh (1985) is an artist and researcher based between Jerusalem and London. He holds a PhD from the university of Westminster, London. He is an M.A. Fine Art holder from Central Saint Martins, 2014. He has obtained his B.A. in contemporary visual art at the International Academy of Art – Palestine.
@@ -78,8 +91,18 @@
          </div>
       </footer>
       <div id="lightbox"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="./panzoom.min.js"></script>
     <script src="../main.js"></script>
+    <script>
+                // just grab a DOM element
+        var element = document.querySelector('.timeline .inner')
+
+        // And pass it to panzoom
+        panzoom(element,{ 
+  maxZoom: 10,
+  minZoom: 1
+})
+    </script>
+
 </body>
 </html>
