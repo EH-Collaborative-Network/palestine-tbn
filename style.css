@@ -571,6 +571,46 @@ main{
 #back-to-home button:hover{
    opacity: 0.9;
 }
+/* BISAN */
+
+
+/*Timeline*/
+.timeline .line{
+    width: 4px;
+    left: 50%;
+    position:absolute;
+    background-color: #773620;
+    height: 1000px;
+}
+.timeline{
+    width: 100%;
+    min-height:100vh;
+    display: block;
+    position:relative;
+}
+.tick{
+   position: absolute;
+   left: 50%;
+}
+.tick div{
+    height: 5px;
+    width: 100px;
+}
+#tick1948 div{
+    background-color: #7c3017;
+}
+#tick1946 div{
+    background-color: #351207;
+}
+.timeline #map1{
+    position:relative;
+    width: 500px;
+}
+.timeline img{
+    width: 100%;
+}
+
+
 
 /* LIGHTBOX*/
 #lightbox{
