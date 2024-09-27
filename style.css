@@ -672,8 +672,18 @@ main{
         margin-right:0;
     }
 
-
-
+    /*Timeline*/
+    .timeline{
+        height: 40vh;
+    }
+    .timeline > p{
+        bottom:0;
+        max-width: 50%;
+        top:auto;
+    }
+    .timeline audio{
+        width:150px;
+    }
     #back-to-home{
         height: 150px;
     }
