@@ -1,4 +1,4 @@
-document.querySelector("footer h4 span").addEventListener("click", function(){
+document.querySelector("footer h4 > span").addEventListener("click", function(){
     if(document.querySelector("footer").classList.contains("on")){
         document.querySelector("footer").classList.remove("on")
     }else{
@@ -45,113 +45,8 @@ resizeBG()
 
 
 
-/* P5 Texture */
 
 
-
-
-
-
-// let graphics;
-// let num = 1;
-// let shouldDraw = true;
-// let veins = []
-// function setup() {
-//     let c;
-        
-//         if(typeof window != `undefined`){
-//             if(window.innerWidth <= 768){
-//               c = createCanvas((window.innerWidth), (window.innerHeight)); 
-//             }else{
-//               c = createCanvas((window.innerWidth), (window.innerHeight)); 
-//             }
-//         }
-//         c.parent('canvas')
-//         background("#000000")
-//         noStroke();
-//     }
-    
-
-//     function draw() {
-//         if(typeof window != `undefined`){
-//             if(shouldDraw){
-//                 for(let i = 0; i < veins.length;i++){
-//                 veins[i].show()
-//                 }     
-//             }
-//         }     
-//     }
-
-
-//     function mouseMoved(){
-//         if(random([true,false,false])){
-                
-//                 let x = random(0, windowWidth/4);
-//                 let y = random(0, windowHeight);
-//                 if(random([true,false])){
-//                     x = random((windowWidth/4 * 3), windowWidth);
-//                 }
-
-//                 veins.push(new Vein(x,y))
-            
-//           }
-//     }
-//     function touchMoved(){
-//         if(random([true,false,false])){
-                
-//                 let x = random(0, windowWidth/4);
-//                 let y = random(0, windowHeight);
-//                 if(random([true,false])){
-//                     x = random((windowWidth/4 * 3), windowWidth);
-//                 }
-
-//                 veins.push(new Vein(x,y))
-            
-//           }
-//     }
-//     function windowResized() {
-//         if(window?.innerWidth <= 768){
-//             resizeCanvas((window?.innerWidth), (window?.innerHeight));
-//         }else{
-//             resizeCanvas((window?.innerWidth), (window?.innerHeight));    
-//         }
-//         blendMode(BLEND);
-//         background("#00fff")
-//     }
-//     class Vein{
-//         constructor(x,y){
-//           this.x = x;
-//           this.y = y;
-//           this.count = 0;
-//         }
-//         show(){
-//             if(typeof window != `undefined`){
-//             let fw = windowWidth/100;
-//             let fh = windowHeight/100;
-//             let xf = floor(map(this.x,0, windowWidth, 0, 100));
-//             let yf = floor(map(this.y,0, windowHeight, 0, 100));
-//             xf = xf + floor(random(-2,2))
-//             yf = yf + floor(random(-2,2))
-//           if(this.count == 0){
-//                 this.x = fw * xf;
-//                 this.y = fh * yf;
-            
-//             rect(this.x,this.y, fw, fh);
-//           }else if(this.count < 100 ){
-//             if(random([true,false,false])){
-//                 this.x = this.x + (fw * floor(random(-2,2)));
-//                 this.y = this.y + (fh * floor(random(-2,2)));
-//             }
-//             fill(random(["#fff","#000000","#9A0000"]));
-//             rect(this.x,this.y, fw, fh);
-//           }
-//           this.count = this.count + 1
-//             }
-//         }
-//       }
-
-
-  
 /* jump scroll */
 let jump = document.querySelector(".main-up");
 jump.addEventListener('click',function(){
@@ -161,38 +56,38 @@ jump.addEventListener('click',function(){
 
 let langButton = document.querySelector("#language-toggle");
 
-// document.addEventListener("DOMContentLoaded", function(){
-// 	const lang = localStorage.getItem('lang');
+document.addEventListener("DOMContentLoaded", function(){
+	const lang = localStorage.getItem('lang');
 	
-// 	if(lang == "русский"){
-//         langButton.innerHTML = "Switch to English"
-//         langButton.classList.add("eng")
-//         document.body.classList.add("arabic")
-//         document.body.classList.remove("english")
-// 	}else{
-//         langButton.innerHTML = "переключиться на русский"
-//         langButton.classList.remove("eng")
-//         document.body.classList.add("english")
-//         document.body.classList.remove("arabic")
-//     }
+	if(lang == "عَرَبِيّ"){
+        langButton.innerHTML = "english"
+        langButton.classList.add("eng")
+        document.body.classList.add("arabic")
+        document.body.classList.remove("english")
+	}else{
+        langButton.innerHTML = "عَرَبِيّ"
+        langButton.classList.remove("eng")
+        document.body.classList.add("english")
+        document.body.classList.remove("arabic")
+    }
 	
-// });
+});
 
-// langButton.addEventListener("click",function(){
-//     if(this.innerHTML == "переключиться на русский"){
-//         localStorage.setItem('lang', "русский");
-//         langButton.innerHTML = "Switch to English"
-//         langButton.classList.add("eng")
-//         document.body.classList.add("arabic")
-//         document.body.classList.remove("english")
-//     }else{
-//         localStorage.setItem('lang', "English");
-//         langButton.innerHTML = "переключиться на русский"
-//         langButton.classList.remove("eng")
-//         document.body.classList.add("english")
-//         document.body.classList.remove("arabic")
-//     }
-// })
+langButton.addEventListener("click",function(){
+    if(this.innerHTML == "عَرَبِيّ"){
+        localStorage.setItem('lang', "عَرَبِيّ");
+        langButton.innerHTML = "Switch to English"
+        langButton.classList.add("eng")
+        document.body.classList.add("arabic")
+        document.body.classList.remove("english")
+    }else{
+        localStorage.setItem('lang', "English");
+        langButton.innerHTML = "عَرَبِيّ"
+        langButton.classList.remove("eng")
+        document.body.classList.add("english")
+        document.body.classList.remove("arabic")
+    }
+})
 /*LIGHTBOX */
 let imgs = document.querySelectorAll(".work img");
 let lb = document.querySelector('#lightbox');

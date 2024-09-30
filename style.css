@@ -294,7 +294,7 @@ footer.on .close svg{
     height: 15px;
     cursor: pointer;
 }
-footer.on h4 span{
+footer.on h4 span span{
     padding-right: 45px;
 }
 footer div{
