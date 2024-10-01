@@ -763,7 +763,7 @@ main{
         padding-top:0;
         margin-top: calc(100vh - 115px);
     }
-
+    
     footer h4{
         transform-origin: top right;
         position:absolute; 
@@ -776,7 +776,12 @@ main{
     footer.on h4{
         left: -253px;
     }
-  
+    .arabic footer h4{
+        left: -196px;
+    }
+    .arabic footer.on h4{
+        left: -203px;
+    }
     #next-artist{
         width:calc(100%);
     }
@@ -809,7 +814,7 @@ main{
         top: 5px;
         right: 15px;
     }
-    footer.on h4 span {
+    footer.on h4 > span > span {
         padding-left: 30px;
         padding-right: 15px;
     }
